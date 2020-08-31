@@ -13,7 +13,7 @@ import api from '../../services/api';
 
 
 
-function TeacherForm() {
+function WorkerForm() {
     const history = useHistory();
 
     const [name, setName] = useState('');
@@ -53,7 +53,7 @@ function TeacherForm() {
         e.preventDefault();
 
         //envia ao backend
-        api.post('classes', {
+        api.post('services', {
             name,
             avatar,
             whatsapp,
@@ -65,7 +65,7 @@ function TeacherForm() {
             alert('Cadastrado com sucesso');
 
             //redireciona
-            history.push('/study');
+            history.push('/hire');
         }).catch(() => {
             alert('Erro no cadastro');
         })
@@ -74,7 +74,7 @@ function TeacherForm() {
     return (
         <div id="page-teacher-form" className="container">
             <PageHeader 
-                title="Que incrível que você quer dar aulas."
+                title="Que incrível que você quer trabalhar conosco."
                 description="O primeiro passo é preencher esse formulário de inscrição"
             />
 
@@ -91,25 +91,27 @@ function TeacherForm() {
                     </fieldset>
 
                     <fieldset>
-                        <legend>Sobre a aula</legend>
+                        <legend>Sobre o serviço</legend>
 
                         <Select
                             name="subject"
-                            label="Matéria"
+                            label="Área de atuação"
                             value={subject} onChange={(e) => {setSubject(e.target.value)}}
                             options={[
-                                {value: 'Artes', label: 'Artes'},
-                                {value: 'Biologia', label: 'Biologia'},
-                                {value: 'Ciências', label: 'Ciências'},
-                                {value: 'Educação Física', label: 'Educação Física'},
-                                {value: 'Física', label: 'Física'},
-                                {value: 'Geografia', label: 'Geografia'},
-                                {value: 'Matemática', label: 'Matemática'},
+                                {value: 'Elétrica', label: 'Elétrica'},
+                                {value: 'Obras', label: 'Obras'},
+                                {value: 'Eletrônica', label: 'Eletrônica'},
+                                {value: 'Computação', label: 'Computação'},
+                                {value: 'Pintura', label: 'Pintura'},
+                                {value: 'Enfermagem', label: 'Enfermagem'},
+                                {value: 'Fisioterapia', label: 'Fisioterapia'},
+                                {value: 'Aulas', label: 'Aulas'},
+                                {value: 'Frete', label: 'Frete'},
                             ]}
                         />
                         <Input
                             name="cost"
-                            label="Custo hora/aula"
+                            label="Custo do serviço"
                             value={cost} onChange={(e) => {setCost(e.target.value)}}/>
 
                     </fieldset>
@@ -152,7 +154,7 @@ function TeacherForm() {
                         <p>
                             <img src={warningIcon} alt="Aviso Importante"/>
                             Importante! <br />
-                            Preencha todos os dados
+                            Preencha todos os campos
                         </p>
 
                         <button type="submit" onClick={handleCreateClass}>
@@ -167,4 +169,4 @@ function TeacherForm() {
     )
 }
 
-export default TeacherForm;
+export default WorkerForm;
