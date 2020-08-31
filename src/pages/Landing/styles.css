@@ -60,19 +60,19 @@
     width: 4rem;
 }
 
-.buttons-container a.study {
+.buttons-container a.hire {
     background: var(--color-primary-lighter);
 }
 
-.buttons-container a.give-classes {
+.buttons-container a.work {
     background: var(--color-secundary);
 }
 
-.buttons-container a.study:hover {
+.buttons-container a.hire:hover {
     background: var(--color-primary-light);
 }
 
-.buttons-container a.give-classes:hover {
+.buttons-container a.work:hover {
     background: var(--color-secundary-dark);
 }
 

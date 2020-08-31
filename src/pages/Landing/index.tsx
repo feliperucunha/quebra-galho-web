@@ -29,24 +29,24 @@ function Landing() {
         <div id="page-landing">
             <div id="page-landing-content" className="container">
                 <div className="logo-container">
-                    <img src={logoImg} alt="Proffy"/>
-                    <h2>Sua plataforma de estudos online</h2>
+                    <img src={logoImg} alt="Quebra-galho"/>
+                    <h2>Sua plataforma de serviços online</h2>
                 </div>
 
                 <img 
                     src={landingImg} 
-                    alt="Plataforma de estudos" 
+                    alt="Plataforma de serviços" 
                     className="hero-image"
                 />
                 <div className="buttons-container">
-                    <Link to="/study" className="study">
-                        <img src={studyIcon} alt="Estudar"/>
-                        Estudar
+                    <Link to="/hire" className="hire">
+                        <img src={studyIcon} alt="Contratar"/>
+                        Contratar
                     </Link>
                                 {/* Era "a" com href e virou link e to para ser single page application */}
-                    <Link to="/give-classes" className="give-classes">
-                        <img src={giveClassesIcon} alt="Dar aulas"/>
-                        Dar aulas
+                    <Link to="/work" className="work">
+                        <img src={giveClassesIcon} alt="Trabalhar"/>
+                        Trabalhar
                     </Link>
 
                 </div>
