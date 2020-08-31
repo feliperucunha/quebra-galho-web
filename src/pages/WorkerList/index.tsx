@@ -10,18 +10,17 @@ import api from '../../services/api';
 
 
 
- function TeacherList() {
-    const [teachers, setTeachers] = useState([]);
-
+ function WorkerList() {
+    const [workers, setWorkers] = useState([]);
     const [subject, setSubject] = useState('');
     const [week_day, setWeek_day] = useState('');
     const [time, setTime] = useState('');
 
-    async function searchTeachers(e: FormEvent) {
+    async function searchWorkers(e: FormEvent) {
         //pŕevê o envio automático do formulário
         e.preventDefault();
 
-        const response = await api.get('classes', {
+        const response = await api.get('services', {
             params: {
                 subject,
                 week_day,
@@ -29,28 +28,30 @@ import api from '../../services/api';
             }
         });
 
-        setTeachers(response.data);
+        setWorkers(response.data);
     }
 
 
     return (
-        <div id="page-teacher-list" className="container">
-            <PageHeader title="Estes são os proffys disponíveis">
-                <form id="search-teachers" onSubmit={searchTeachers}>
+        <div id="page-worker-list" className="container">
+            <PageHeader title="Estes são os profissionais disponíveis">
+                <form id="search-workers" onSubmit={searchWorkers}>
                     
                 <Select
                         name="subject"
-                        label="Matéria"
+                        label="Área de atuação"
                         value={subject}
                         onChange={e => {setSubject(e.target.value)}}
                         options={[
-                            {value: 'Artes', label: 'Artes'},
-                            {value: 'Biologia', label: 'Biologia'},
-                            {value: 'Ciências', label: 'Ciências'},
-                            {value: 'Educação Física', label: 'Educação Física'},
-                            {value: 'Física', label: 'Física'},
-                            {value: 'Geografia', label: 'Geografia'},
-                            {value: 'Matemática', label: 'Matemática'},
+                            {value: 'Elétrica', label: 'Elétrica'},
+                            {value: 'Obras', label: 'Obras'},
+                            {value: 'Eletrônica', label: 'Eletrônica'},
+                            {value: 'Computação', label: 'Computação'},
+                            {value: 'Pintura', label: 'Pintura'},
+                            {value: 'Enfermagem', label: 'Enfermagem'},
+                            {value: 'Fisioterapia', label: 'Fisioterapia'},
+                            {value: 'Aulas', label: 'Aulas'},
+                            {value: 'Frete', label: 'Frete'},
                         ]}
                 />
 
@@ -85,12 +86,12 @@ import api from '../../services/api';
             </PageHeader>
 
             <main>
-                {teachers.map((teacher: Teacher) => {
-                    return <TeacherItem teacher={teacher}/>
+                {workers.map((worker: Teacher) => {
+                    return <TeacherItem teacher={worker}/>
                 })}
             </main>
         </div>
     )
 }
 
-export default TeacherList;
+export default WorkerList;

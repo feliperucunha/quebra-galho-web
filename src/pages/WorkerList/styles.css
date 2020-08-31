@@ -1,17 +1,17 @@
-#page-teacher-list {
+#page-worker-list {
     width: 100vw;
     height: 100vh;
 }
 
-#search-teachers {
+#search-workers {
     margin-top: 3.2rem;
 }
 
-#search-teachers label {
+#search-workers label {
     color: var(--color-text-in-primary);
 }
 
-#search-teachers button {
+#search-workers button {
     width: 100%;
     height: 5.6rem;
     background: var(--color-secundary);
@@ -28,11 +28,11 @@
     margin-top: 3.2rem;
 }
 
-#search-teachers button:hover {
+#search-workers button:hover {
     color: var(--color-secundary-dark);
 }
 
-#page-teacher-list main {
+#page-worker-list main {
     margin: 3.2rem auto;
     width: 90%;
 }
@@ -40,11 +40,11 @@
 
 
 @media (min-width: 700px) {
-    #page-teacher-list {
+    #page-worker-list {
         max-width: 100%;
     }
 
-    #search-teachers {
+    #search-workers {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 16px;
@@ -52,13 +52,13 @@
         bottom: -30px;
     }
 
-    #search-teachers .input-block+ .input-block ,
-    #search-teachers .select-block+ .select-block {
+    #search-workers .input-block+ .input-block ,
+    #search-workers .select-block+ .select-block {
         margin-top: 0;
     }
     
 
-    #page-teacher-list main {
+    #page-worker-list main {
         padding: 3.2rem 0;
         max-width: 740px;
         margin: 0 auto;

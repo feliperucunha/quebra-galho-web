@@ -49,7 +49,7 @@ function WorkerForm() {
         setScheduleItems(updatedScheduleItems);
     }
 
-    function handleCreateClass(e: FormEvent) {
+    function handleCreateWorker(e: FormEvent) {
         e.preventDefault();
 
         //envia ao backend
@@ -72,7 +72,7 @@ function WorkerForm() {
     }
     
     return (
-        <div id="page-teacher-form" className="container">
+        <div id="page-worker-form" className="container">
             <PageHeader 
                 title="Que incrível que você quer trabalhar conosco."
                 description="O primeiro passo é preencher esse formulário de inscrição"
@@ -157,7 +157,7 @@ function WorkerForm() {
                             Preencha todos os campos
                         </p>
 
-                        <button type="submit" onClick={handleCreateClass}>
+                        <button type="submit" onClick={handleCreateWorker}>
                             Salvar Cadastro
                         </button>
 

@@ -1,13 +1,13 @@
-#page-teacher-form {
+#page-worker-form {
     width: 100vw;
     height: 100vh;
 }
 
-#page-teacher-form .page-header .header-content {
+#page-worker-form .page-header .header-content {
     margin-bottom: 6.4rem;
 }
 
-#page-teacher-form main {
+#page-worker-form main {
     background: var(--color-box-base);
     width: 100%;
     max-width: 74rem;
@@ -16,12 +16,12 @@
     padding-top: 6.4rem;
 }
 
-#page-teacher-form fieldset {
+#page-worker-form fieldset {
     border: none;
     padding: 0 2.4rem;
 }
 
-#page-teacher-form fieldset legend {
+#page-worker-form fieldset legend {
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
     margin-bottom: 2.4rem;
@@ -36,7 +36,7 @@
     border-bottom: 1px solid var(--color-line-in-white);
 }
 
-#page-teacher-form fieldset legend button {
+#page-worker-form fieldset legend button {
     background: none;
     border: 0;
 
@@ -47,29 +47,29 @@
     transition: 0.2;
 }
 
-#page-teacher-form fieldset legend button:hover {
+#page-worker-form fieldset legend button:hover {
     transform: translateY(-5px);
     color: var(--color-primary-dark);
 }
 
-#page-teacher-form fieldset+fieldset {
+#page-worker-form fieldset+fieldset {
     margin-top: 6.4rem;
 }
 
-#page-teacher-form main .input-block+.input-block,
-#page-teacher-form main .input-block+.textarea-block,
-#page-teacher-form main .select-block+.input-block { /* + indica um elemento seguido de outro */
+#page-worker-form main .input-block+.input-block,
+#page-worker-form main .input-block+.textarea-block,
+#page-worker-form main .select-block+.input-block { /* + indica um elemento seguido de outro */
     margin-top: 2.4rem;
 }
 
-#page-teacher-form main footer {
+#page-worker-form main footer {
     padding: 4rem 2.4rem;
     background: var(--color-box-footer);
     border-top: 1px solid var(--color-line-in-white);
     margin-top: 6.4rem;
 }
 
-#page-teacher-form main footer p {
+#page-worker-form main footer p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,11 +79,11 @@
     color: var(--color-text-complement);
 }
 
-#page-teacher-form main footer p img {
+#page-worker-form main footer p img {
     margin-right: 2rem;
 }
 
-#page-teacher-form main footer button {
+#page-worker-form main footer button {
     width: 100%;
     height: 5.6rem;
     background: var(--color-secundary);
@@ -100,7 +100,7 @@
     margin-top: 3.2rem;
 }
 
-#page-teacher-form main footer button:hover {
+#page-worker-form main footer button:hover {
     color: var(--color-secundary-dark);
 }
 
@@ -112,15 +112,15 @@
 
 
 @media (min-width: 700px) {
-    #page-teacher-form  {
+    #page-worker-form  {
         max-width: 100vw;
     }
 
-    #page-teacher-form .page-header .header-content {
+    #page-worker-form .page-header .header-content {
         margin-bottom: 0;
     }
 
-    #page-teacher-form main fieldset {
+    #page-worker-form main fieldset {
         padding: 0 64px;
     }
 
@@ -134,7 +134,7 @@
         margin-top: 0 !important;  /*ultrapassa outras prioridades */
     }
 
-    #page-teacher-form main footer {
+    #page-worker-form main footer {
         padding: 4rem 6.4rem;
 
         display: flex;
@@ -142,7 +142,7 @@
         justify-content: space-between;
     }
 
-    #page-teacher-form main footer button {
+    #page-worker-form main footer button {
         margin-top: 0;
 
         width: 20rem;
