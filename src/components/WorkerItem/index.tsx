@@ -5,7 +5,7 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 import './styles.css'
 import api from '../../services/api';
 
-export interface Teacher {
+export interface Worker {
     id: number;
     avatar: string;
     bio: string;
@@ -15,36 +15,36 @@ export interface Teacher {
     whatsapp: string;
 }
 
-interface TeacherItemProps {
-    teacher: Teacher;
+interface WorkerItemProps {
+    worker: Worker;
 }
 
-const TeacherItem: React.FC <TeacherItemProps> = ({ teacher }) => {
+const WorkerItem: React.FC <WorkerItemProps> = ({ worker }) => {
     function createNewConnection() {
         api.post('connections', {
-            user_id: teacher.id,
+            user_id: worker.id,
         })
     }
     
     return(
-        <article className="teacher-item">
+        <article className="worker-item">
             <header>
-                <img src={teacher.avatar} alt={teacher.name}/>
+                <img src={worker.avatar} alt={worker.name}/>
                 <div>
-                    <strong>{teacher.name}</strong>
-                    <span>{teacher.subject}</span>
+                    <strong>{worker.name}</strong>
+                    <span>{worker.subject}</span>
                 </div>
             </header>
 
-            <p>E{teacher.bio}</p>
+            <p>{worker.bio}</p>
 
             <footer>
                 <p>
-                    Preço/hora
-                    <strong>R$ {teacher.cost}</strong>
+                    Preço
+                    <strong>R$ {worker.cost}</strong>
                 </p>
                 {/* Abre a API do whatsapp em outra aba com o número do usuário e manda uma mensagem */}
-            <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}?text=Oi,%20vi%20seu%20anúncio%20no%20proffy`}>
+            <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${worker.whatsapp}?text=Oi,%20vi%20seu%20anúncio%20no%20proffy`}>
                 <img src={whatsappIcon} alt="Whatsapp"/>
                 Entrar em contato
             </a>
@@ -54,4 +54,4 @@ const TeacherItem: React.FC <TeacherItemProps> = ({ teacher }) => {
     )
 }
 
-export default TeacherItem;
+export default WorkerItem;

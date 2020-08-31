@@ -1,7 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 
 import PageHeader from '../../components/PageHeader';
-import TeacherItem, {Teacher} from '../../components/TeacherItem';
+import WorkerItem, {Worker} from '../../components/WorkerItem';
 import Input from '../../components/Input'
 import Select from '../../components/Select';
 
@@ -86,8 +86,8 @@ import api from '../../services/api';
             </PageHeader>
 
             <main>
-                {workers.map((worker: Teacher) => {
-                    return <TeacherItem teacher={worker}/>
+                {workers.map((worker: Worker) => {
+                    return <WorkerItem worker={worker}/>
                 })}
             </main>
         </div>
