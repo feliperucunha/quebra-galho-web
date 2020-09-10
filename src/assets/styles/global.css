@@ -1,0 +1,65 @@
+:root {
+  --color-background: #f0f0f7;
+  --color-primary-lighter: #057aa8;
+  --color-primary-light: #066a92;
+  --color-primary: #0dafef;
+  --color-primary-dark: #774dd6;
+  --color-primary-darker: #6842c2;
+  --color-secundary: #ffa15f;
+  --color-secundary-dark: #e0813d;
+  --color-title-in-primary: #ffffff;
+  --color-text-in-primary: #c2e6f5;
+  --color-text-title: #32264d;
+  --color-text-complement: #9c98a6;
+  --color-text-base: #6a6180;
+  --color-line-in-white: #e6e6f0;
+  --color-input-background: #f8f8fc;
+  --color-button-text: #ffffff;
+  --color-box-base: #ffffff;
+  --color-box-footer: #fafafc;
+
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Página sempre ocupa a tela toda*/
+html,
+body #root {
+  height: 100vh;
+}
+
+body {
+  background: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
+}
+
+/* Ocupa 90% da tela até 700px */
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
+
+/* Responsividade para dispositivos maiores */
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
